@@ -38,7 +38,6 @@ dependencies {
     api rootProject.ext.dependencies["smart-refresh-header"]
     api rootProject.ext.dependencies["auto-page-layout"]
     api rootProject.ext.dependencies["magic-indicator"]
-    api rootProject.ext.dependencies["custom-dialog"]
 }
 
 publish {
