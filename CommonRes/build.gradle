@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -41,4 +42,14 @@ dependencies {
     api rootProject.ext.dependencies["auto-page-layout"]
     //页签框架
     api rootProject.ext.dependencies["magic-indicator"]
+}
+
+publish {
+    repoName = 'maven'// If not, the default is 'maven'
+    userOrg = 'jasonlian'
+    groupId = 'me.jason.library'
+    artifactId = 'commen-res'
+    publishVersion = '1.0.0'
+    desc = 'hello jason'
+    website = 'https://github.com/tomUp/CommonComponent'
 }
