@@ -1,0 +1,11 @@
+<resources>
+    <string name="public_app_name">BaoJiComponent</string>
+    <string name="public_module_name">app</string>
+    <string name="public_loading">加载中</string>
+    <string name="public_name_zhihu">知乎日报</string>
+    <string name="public_name_gank">干货集中营</string>
+    <string name="public_name_gold">稀土掘金</string>
+    //tips
+    <string name="public_layout_error_tips">好像连接不上网络，请刷新试试~</string>
+    <string name="public_layout_empty_tips">没有找到相关内容</string>
+</resources>
