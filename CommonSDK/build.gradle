@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -49,4 +50,14 @@ dependencies {
     //bugly crashreport
     api rootProject.ext.dependencies["crashreport-sdk"]
     api rootProject.ext.dependencies["crashreport-ndk"]
+}
+
+publish {
+    repoName = 'maven'// If not, the default is 'maven'
+    userOrg = 'jasonlian'
+    groupId = 'me.jason.library'
+    artifactId = 'common-sdk'
+    publishVersion = '1.0.0'
+    desc = 'hello jason'
+    website = 'https://github.com/tomUp/CommonComponent'
 }
