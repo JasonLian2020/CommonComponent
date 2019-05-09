@@ -31,6 +31,7 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import me.jessyan.armscomponent.commonsdk.BuildConfig;
+import me.jessyan.armscomponent.commonsdk.CommonSdkBuildConfig;
 import me.jessyan.armscomponent.commonsdk.http.SSLSocketClient;
 import me.jessyan.armscomponent.commonsdk.imgaEngine.Strategy.CommonGlideImageLoaderStrategy;
 import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
@@ -52,7 +53,7 @@ public class GlobalConfiguration implements ConfigModule {
 
     @Override
     public void applyOptions(Context context, GlobalConfigModule.Builder builder) {
-        if (!BuildConfig.LOG_DEBUG) //Release 时,让框架不再打印 Http 请求和响应的信息
+        if (!BuildConfig.LOG_DEBUG && !CommonSdkBuildConfig.LOG_DEBUG) //Release 时,让框架不再打印 Http 请求和响应的信息
             builder.printHttpLogLevel(RequestInterceptor.Level.NONE);
         builder.imageLoaderStrategy(new CommonGlideImageLoaderStrategy())
                 .globalHttpHandler(new GlobalHttpHandlerImpl(context))
@@ -88,7 +89,7 @@ public class GlobalConfiguration implements ConfigModule {
 
             @Override
             public void onCreate(@NonNull Application application) {
-                if (BuildConfig.LOG_DEBUG) {//Timber日志打印
+                if (BuildConfig.LOG_DEBUG || CommonSdkBuildConfig.LOG_DEBUG) {//Timber日志打印
                     Timber.plant(new Timber.DebugTree());
                     ButterKnife.setDebug(true);
                     ARouter.openLog();     // 打印日志
