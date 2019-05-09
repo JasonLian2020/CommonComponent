@@ -1,13 +1,27 @@
 package me.jason.app.commoncomponent;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.jess.arms.base.BaseActivity;
+import com.jess.arms.di.component.AppComponent;
+
+@Route(path = RouterHub.APP_MAINACTIVITY)
+public class MainActivity extends BaseActivity {
+    @Override
+    public void setupActivityComponent(@NonNull AppComponent appComponent) {
+
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public int initView(@Nullable Bundle savedInstanceState) {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initData(@Nullable Bundle savedInstanceState) {
+
     }
 }
