@@ -24,8 +24,8 @@ ext {
 
     dependencies = [
             //common
-            "common-res"               : "me.jason.library:common-res:1.0.3",
-            "common-sdk"               : "me.jason.library:common-sdk:1.0.0",
+            "common-res"               : "me.jason.library:common-res:1.0.4",
+            "common-sdk"               : "me.jason.library:common-sdk:1.0.1",
 
             //support
             "appcompat-v7"             : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
