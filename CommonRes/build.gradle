@@ -5,6 +5,11 @@ android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
 
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
@@ -27,7 +32,6 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     api rootProject.ext.dependencies["autosize"]
-    api rootProject.ext.dependencies["common-sdk"] //因为 CommonRes 依赖了 CommonSDK, 所以如果业务模块需要公共 UI 组件就依赖 CommonRes, 如果不需要就只依赖 CommonSDK
     api(rootProject.ext.dependencies["cardview-v7"]) {
             exclude module: 'support-annotations'
     }
@@ -46,7 +50,7 @@ publish {
     userOrg = 'jasonlian'
     groupId = 'me.jason.library'
     artifactId = 'common-res'
-    publishVersion = '1.0.4'
+    publishVersion = '1.0.5'
     desc = 'hello jason'
     website = 'https://github.com/tomUp/CommonComponent'
 }
