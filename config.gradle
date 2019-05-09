@@ -24,7 +24,7 @@ ext {
 
     dependencies = [
             //common
-            "common-res"               : "me.jason.library:common-res:1.0.2",
+            "common-res"               : "me.jason.library:common-res:1.0.3",
             "common-sdk"               : "me.jason.library:common-sdk:1.0.0",
 
             //support
