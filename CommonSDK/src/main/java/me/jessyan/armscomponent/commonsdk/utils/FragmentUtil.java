@@ -1,4 +1,4 @@
-package me.jessyan.armscomponent.commonres.utils;
+package me.jessyan.armscomponent.commonsdk.utils;
 
 import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
