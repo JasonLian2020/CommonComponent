@@ -59,7 +59,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //common
-    implementation project(":CommonRes")
+    implementation rootProject.ext.dependencies["common-res"]
     //test
     testImplementation rootProject.ext.dependencies["junit"]
     //view
