@@ -60,6 +60,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //common
     implementation rootProject.ext.dependencies["common-res"]
+    implementation rootProject.ext.dependencies["common-sdk"]
     //test
     testImplementation rootProject.ext.dependencies["junit"]
     //view
