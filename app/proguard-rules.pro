@@ -276,3 +276,11 @@
 -keep public class com.tencent.bugly.**{*;}
 
 ################################CommonSDK end################################
+
+################################CommonRes start################################
+
+################AndroidAutoSize#################
+-keep class me.jessyan.autosize.** { *; }
+-keep interface me.jessyan.autosize.** { *; }
+
+################################CommonRes end################################
