@@ -35,6 +35,8 @@
 -verbose
 # 保留Annotation不混淆 这在JSON实体映射时非常重要，比如fastJson
 -keepattributes *Annotation*,InnerClasses
+# 抛出异常时保留代码行号
+-keepattributes SourceFile,LineNumberTable
 # 混淆前后的映射
 -printmapping priguardMapping.txt
 # 混淆时所采用的算法
@@ -74,6 +76,9 @@
 -keep class android.support.** { *; }
 -keep interface android.support.** { *; }
 -dontwarn android.support.**
+
+# 使用gson进行解析json数据时，创建的实体类及其引用不能混淆，如果混淆就解析出问题
+-keep class **.mvp.model.entity.**{*;}
 
 
 ################################CommonSDK start################################
