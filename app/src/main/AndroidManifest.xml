@@ -46,6 +46,9 @@
         <meta-data
             android:name="me.jessyan.armscomponent.commonsdk.core.GlobalConfiguration"
             android:value="ConfigModule" />
+        <meta-data
+            android:name="me.jason.app.commoncomponent.GlobalConfiguration"
+            android:value="ConfigModule" />
     </application>
 
 </manifest>
