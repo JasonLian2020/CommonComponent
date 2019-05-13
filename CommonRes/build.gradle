@@ -43,6 +43,7 @@ dependencies {
     api rootProject.ext.dependencies["magic-indicator"]
     api rootProject.ext.dependencies["auto-page-layout"]
     api rootProject.ext.dependencies["custom-dialog"]
+    api rootProject.ext.dependencies["BRVAH"]
 }
 
 publish {

@@ -65,6 +65,7 @@ ext {
             "magic-indicator"          : "com.github.hackware1993:MagicIndicator:1.5.0",//页签框架
             "auto-page-layout"         : "me.jason.library:auto-page-layout:1.0.2",//切换页面框架
             "custom-dialog"            : "me.jason.library:custom-dialog:1.0.2",//弹窗框架
+            "BRVAH"                    : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45",
 
             //rx1
             "rxandroid"                : "io.reactivex:rxandroid:1.2.1",
