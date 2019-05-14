@@ -27,13 +27,19 @@ public abstract class BaseLazyFragment<P extends IPresenter> extends BaseFragmen
      * Fragment是否第一次加载数据
      */
     protected boolean isFirst = true;
+    /**
+     * Fragment是否初始化view配置
+     */
+    private boolean isInitView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (rootView == null) {
+            isInitView = true;
             rootView = initView(inflater, container, savedInstanceState);
         } else {
+            isInitView = false;
             ViewGroup parent = (ViewGroup) rootView.getParent();
             if (parent != null) {
                 parent.removeView(rootView);
@@ -45,6 +51,7 @@ public abstract class BaseLazyFragment<P extends IPresenter> extends BaseFragmen
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        if (isInitView) initViewConfig();// 避免多次调用
         isPrepared = true;
         onVisible();
     }
@@ -63,7 +70,7 @@ public abstract class BaseLazyFragment<P extends IPresenter> extends BaseFragmen
 
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
-        initViewConfig();
+        //do nothing
     }
 
     /**
