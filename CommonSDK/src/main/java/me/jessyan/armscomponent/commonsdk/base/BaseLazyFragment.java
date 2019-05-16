@@ -8,7 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jess.arms.base.BaseFragment;
+import com.jess.arms.base.delegate.FragmentDelegateImpl;
 import com.jess.arms.mvp.IPresenter;
+
+import butterknife.Unbinder;
 
 public abstract class BaseLazyFragment<P extends IPresenter> extends BaseFragment<P> {
     /**
@@ -46,6 +49,16 @@ public abstract class BaseLazyFragment<P extends IPresenter> extends BaseFragmen
             }
         }
         return rootView;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        /**
+         * 由于框架{@link FragmentDelegateImpl#onDestroyView()}会调用{@link Unbinder#unbind()}解除绑定，
+         * 此时view会为null，此时再调用{@link #initData()}就会报错，所以{@link isPrepared}需要在此时改为false
+         */
+        isPrepared = false;
     }
 
     @Override
