@@ -88,6 +88,9 @@ ext {
             "rxpermissions2"           : "com.github.tbruyelle:rxpermissions:0.10.2",
             "rxerrorhandler2"          : "me.jessyan:rxerrorhandler:2.1.1",
 
+            //utils
+            "utilcode"                 : "com.blankj:utilcode:1.23.7",
+
             //tools
             "dagger2"                  : "com.google.dagger:dagger:${version["dagger2SdkVersion"]}",
             "dagger2-android"          : "com.google.dagger:dagger-android:${version["dagger2SdkVersion"]}",

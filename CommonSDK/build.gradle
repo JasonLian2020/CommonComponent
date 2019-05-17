@@ -50,6 +50,8 @@ dependencies {
     //bugly crashreport
     api rootProject.ext.dependencies["crashreport-sdk"]
     api rootProject.ext.dependencies["crashreport-ndk"]
+    //utilcode
+    api rootProject.ext.dependencies["utilcode"]
 }
 
 publish {
