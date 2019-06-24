@@ -51,7 +51,7 @@ publish {
     userOrg = 'jasonlian'
     groupId = 'me.jason.library'
     artifactId = 'common-res'
-    publishVersion = '1.0.6'
+    publishVersion = '1.0.7'
     desc = 'hello jason'
     website = 'https://github.com/tomUp/CommonComponent'
 }
