@@ -46,12 +46,4 @@
     <color name="public_text_main">#333333</color><!--字体主色-->
     <color name="public_text_second">#666666</color><!--字体第二辅助色-->
     <color name="public_text_third">#999999</color><!--字体第三辅助色-->
-    <color name="public_text_weak">#7f999999</color><!--字体弱化、输入框提示的颜色-->
-    <color name="public_divider_main">#F0F0F0</color><!--分割线-->
-    <color name="public_background_main">#F4F4F4</color><!--主背景色-->
-    <color name="public_background_second">#FAFAFA</color><!--辅助背景色-->
-    <color name="public_price_main">#F44336</color><!--价格-->
-    <color name="public_warning_main">#F44336</color><!--警告色-->
-    <color name="public_stroke_main">#F0F0F0</color><!--主描边-->
-    <color name="public_hyberlink_main">#576B95</color><!--超链接，用于点击跳转到web页面-->
 </resources>
