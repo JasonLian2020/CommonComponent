@@ -27,6 +27,12 @@ android {
     }
 
     resourcePrefix "public_" //给 Module 内的资源名增加前缀, 避免资源名冲突
+
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -41,8 +47,6 @@ dependencies {
     api rootProject.ext.dependencies["smart-refresh-layout"]
     api rootProject.ext.dependencies["smart-refresh-header"]
     api rootProject.ext.dependencies["magic-indicator"]
-    api rootProject.ext.dependencies["auto-page-layout"]
-    api rootProject.ext.dependencies["custom-dialog"]
     api rootProject.ext.dependencies["BRVAH"]
 }
 
@@ -51,7 +55,7 @@ publish {
     userOrg = 'jasonlian'
     groupId = 'me.jason.library'
     artifactId = 'common-res'
-    publishVersion = '1.1.0'
+    publishVersion = '1.1.1'
     desc = 'hello jason'
     website = 'https://github.com/tomUp/CommonComponent'
 }
